@@ -1,0 +1,17 @@
+Mongo 认知文档
+Mongo 的文档类型类似与JSON：键与值的写法{"键","值"}
+                         {"first":"name"}
+                         等价于javascript:{first:"name"}
+JSON 和 JS 对象互转
+要实现从对象转换为 JSON 字符串，使用 JSON.stringify() 方法：
+    var json = JSON.stringify({a: 'Hello', b: 'World'}); //结果是 '{"a": "Hello", "b": "World"}'
+    
+要实现从 JSON 转换为对象，使用 JSON.parse() 方法：
+	var obj = JSON.parse('{"a": "Hello", "b": "World"}'); //结果是 {a: 'Hello', b: 'World'}
+
+Mongo 基本操作内容：
+                    C端：mongo
+                    命令：进入数据库：db.auth("用户名","密码")
+                         查看表单内容：db.表单.find<>
+                         查询数据库中表：show collections
+                         添加：insert 删除：remore 更新：update
